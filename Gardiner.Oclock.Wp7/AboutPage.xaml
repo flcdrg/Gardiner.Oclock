@@ -56,7 +56,7 @@
                 <RichTextBox TextWrapping="Wrap" >
                     <Paragraph>
                         Clock design based on Pencho Popadiyn's article
-                        <Hyperlink NavigateUri="http://www.silverlightshow.net/items/Developing-Silverlight-Analog-Clock-pattern-oriented-approach.aspx">Developing Silverlight Analog Clock - pattern oriented approach</Hyperlink>
+                        <Hyperlink NavigateUri="http://www.silverlightshow.net/items/Developing-Silverlight-Analog-Clock-pattern-oriented-approach.aspx" TargetName="_blank">Developing Silverlight Analog Clock - pattern oriented approach</Hyperlink>
                     </Paragraph>
                     <Paragraph>
                         <LineBreak />

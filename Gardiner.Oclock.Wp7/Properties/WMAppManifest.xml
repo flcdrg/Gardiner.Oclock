@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{61b68141-bf17-41fe-8ddf-d75075d92871}" Title="Gardiner.Oclock.Wp7" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="David Gardiner" Description="Sample description" Publisher="David Gardiner">
-    <IconPath IsRelative="true" IsResource="false">noun_project_1164-62x62.png</IconPath>
+  <App xmlns="" ProductID="{61b68141-bf17-41fe-8ddf-d75075d92871}" Title="O'Clock" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="David Gardiner" Description="Learn to tell the time" Publisher="David Gardiner">
+    <IconPath IsRelative="true" IsResource="false">noun_project_1164-62x62 - White.png</IconPath>
     <Capabilities>
     </Capabilities>
     <Tasks>
@@ -10,9 +10,9 @@
     <Tokens>
       <PrimaryToken TokenID="Gardiner.Oclock.Wp7Token" TaskName="_default">
         <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">noun_project_1164-173x173.png</BackgroundImageURI>
+          <BackgroundImageURI IsRelative="true" IsResource="false">noun_project_1164-173x173 - White.png</BackgroundImageURI>
           <Count>0</Count>
-          <Title>Gardiner.Oclock.Wp7</Title>
+          <Title>O'Clock</Title>
         </TemplateType5>
       </PrimaryToken>
     </Tokens>
