@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows;
 using System.Windows.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 
@@ -63,6 +64,17 @@ namespace Gardiner.Oclock.Wp7
         {
             NavigationService.Navigate( new Uri( "/CurrentTimePage.xaml", UriKind.Relative ) );
 
+        }
+
+        private void GotoSayTime( object sender, RoutedEventArgs e )
+        {
+            NavigationService.Navigate( new Uri( "/SayTheTimePage.xaml", UriKind.Relative ) );
+            
+        }
+
+        private void GotoAbout( object sender, EventArgs e )
+        {
+            NavigationService.Navigate( new Uri( "/AboutPage.xaml", UriKind.Relative ) );
         }
     }
 }

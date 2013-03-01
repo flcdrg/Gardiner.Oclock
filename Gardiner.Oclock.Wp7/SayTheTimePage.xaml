@@ -6,6 +6,7 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Wp7="clr-namespace:Gardiner.Oclock.Wp7"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
@@ -29,6 +30,32 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" MinHeight="90" />
+                <RowDefinition Height="Auto" MinHeight="90" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <Wp7:AnalogClock x:Name="Clock"/>
+            <TextBlock Grid.Row="1" x:Name="Instructions" TextWrapping="Wrap">
+                Say out loud what time is displayed on the clock. The 
+                correct answer will be displayed after a short delay.
+                <LineBreak />
+                
+            </TextBlock>
+            <TextBlock x:Name="Answer" Grid.Row="2" Visibility="Collapsed"
+                       FontSize="70" HorizontalAlignment="Center" Margin="145,0" Width="166"
+                       
+                       >12:15</TextBlock>
+            
+            <TextBlock x:Name="AnswerSentence" 
+                       Visibility="Collapsed"
+                       Grid.Row="3" TextWrapping="Wrap" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Quarter past 12
+            </TextBlock>
+            <Button x:Name="Go" Grid.Row="4" HorizontalAlignment="Center" Width="200" Click="Go_OnClick" Margin="128,0">Go</Button>
         </Grid>
     </Grid>
 
