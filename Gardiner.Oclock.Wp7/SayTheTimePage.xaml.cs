@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+using System.Globalization;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
+using System.Windows.Input;
 
 namespace Gardiner.Oclock.Wp7
 {
-    public partial class SayTheTimePage : PhoneApplicationPage
+    public partial class SayTheTimePage
     {
         public SayTheTimePage()
         {
@@ -23,6 +18,8 @@ namespace Gardiner.Oclock.Wp7
 
         readonly Random _rnd;
         private TimeSpan _time;
+        private IDisposable _timer;
+        private IDisposable _tap;
 
         private void Go_OnClick( object sender, RoutedEventArgs e )
         {
@@ -36,7 +33,13 @@ namespace Gardiner.Oclock.Wp7
 
             Clock.Update(_time);
 
-            Answer.Text = _time.ToString( "h\\:mm" );
+            //Answer.Text = _time.ToString( "h\\:mm" );
+
+            // Display hours start at 1
+            if ( hour == 0 )
+                hour = 12;
+
+            Answer.Text = string.Format( "{0}:{1:00}", hour, minutes );
 
             string sentence;
             if ( minutes == 0 )
@@ -60,18 +63,49 @@ namespace Gardiner.Oclock.Wp7
             Answer.Visibility = Visibility.Collapsed;
             AnswerSentence.Visibility = Visibility.Collapsed;
             Go.Visibility = Visibility.Collapsed;
+            CountDown.Visibility = Visibility.Visible;
 
-            Observable
-                .Timer( TimeSpan.FromSeconds( 8 ) )
+            var observableTap = Observable
+                .FromEventPattern<GestureEventArgs>( handler => LayoutRoot.Tap += handler,
+                                                     handler => LayoutRoot.Tap -= handler )
                 .ObserveOnDispatcher()
-                .SubscribeOn( ThreadPoolScheduler.Instance )
-                .Subscribe( l =>
-                    {
-                        AnswerSentence.Visibility = Visibility.Visible;
-                        Answer.Visibility = Visibility.Visible;
-                        Go.Visibility = Visibility.Visible;
-                    } );
+                .SubscribeOn( ThreadPoolScheduler.Instance );
 
+            _tap = observableTap
+                .Subscribe( pattern => ShowAnswer() );
+
+            int countDownStart = 8;
+
+            var observableTimer = Observable
+                .Timer( TimeSpan.Zero, TimeSpan.FromSeconds( 1 ) )
+                .ObserveOnDispatcher()
+                .SubscribeOn( ThreadPoolScheduler.Instance );
+
+            _timer = observableTimer
+                .Subscribe( value =>
+                    {
+                        if ( value == countDownStart )
+                            ShowAnswer();
+                        else
+                            CountDown.Text = ( countDownStart - value ).ToString( CultureInfo.CurrentCulture );
+                    } );
+        }
+
+        private void ShowAnswer()
+        {
+            if ( _timer != null )
+                _timer.Dispose();
+
+            if (_tap != null)
+                _tap.Dispose();
+
+
+            CountDown.Text = string.Empty;
+
+            AnswerSentence.Visibility = Visibility.Visible;
+            Answer.Visibility = Visibility.Visible;
+            Go.Visibility = Visibility.Visible;
+            CountDown.Visibility = Visibility.Collapsed;
         }
     }
 }

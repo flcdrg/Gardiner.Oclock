@@ -129,9 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="noun_project_1164-173x173 - White.png" />
-    <Content Include="noun_project_1164-173x173.png" />
     <Content Include="noun_project_1164-62x62 - White.png" />
-    <Content Include="noun_project_1164-62x62.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
