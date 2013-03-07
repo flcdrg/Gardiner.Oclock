@@ -42,20 +42,32 @@ namespace Gardiner.Oclock.Wp7
             Answer.Text = string.Format( "{0}:{1:00}", hour, minutes );
 
             string sentence;
-            if ( minutes == 0 )
+            switch ( minutes )
             {
-                sentence = string.Format( "{0} o'clock", hour );
-            }
-            else
-            {
-                if ( minutes == 15 )
+                case 0:
+                    sentence = string.Format( "{0} o'clock", hour );
+                    break;
+                case 1:
+                    sentence = string.Format( "{0} minute past {1}", minutes, hour );
+                    break;
+                case 15:
                     sentence = string.Format( "Quarter past {0}", hour );
-                else if ( minutes == 45 )
+                    break;
+                case 45:
                     sentence = string.Format( "Quarter to {0}", hour < 12 ? hour + 1 : 1 );
-                else if ( minutes < 30 )
-                    sentence = string.Format( "{0} minutes past {1}", minutes, hour );
-                else
-                    sentence = string.Format( "{0} minutes to {1}", 60 - minutes, hour < 12 ? hour + 1 : 1 );
+                    break;
+                case 30:
+                    sentence = string.Format( " Half-past {0}", hour );
+                    break;
+                case 59:
+                    sentence = string.Format( "{0} minute to {1}", 60 - minutes, hour < 12 ? hour + 1 : 1 );
+                    break;
+                default:
+                    if ( minutes < 30 )
+                        sentence = string.Format( "{0} minutes past {1}", minutes, hour );
+                    else
+                        sentence = string.Format( "{0} minutes to {1}", 60 - minutes, hour < 12 ? hour + 1 : 1 );
+                    break;
             }
 
             AnswerSentence.Text = sentence;
