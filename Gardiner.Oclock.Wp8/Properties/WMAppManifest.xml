@@ -6,7 +6,7 @@
     <Capabilities>
     </Capabilities>
     <Tasks>
-      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+      <DefaultTask Name="_default" NavigationPage="Gardiner.Oclock.UI;component/MainPage.xaml" />
     </Tasks>
     <Tokens>
       <PrimaryToken TokenID="Gardiner.Oclock.Wp8Token" TaskName="_default">

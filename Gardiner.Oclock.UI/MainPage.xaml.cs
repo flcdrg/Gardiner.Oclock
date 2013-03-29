@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Windows;
 
-namespace Gardiner.Oclock.Wp7
+namespace Gardiner.Oclock.UI
 {
     public partial class MainPage
     {
@@ -11,14 +11,14 @@ namespace Gardiner.Oclock.Wp7
             InitializeComponent();
         }
 
-        private void Button_Click_1( object sender, System.Windows.RoutedEventArgs e )
+        private void Button_Click_1( object sender, RoutedEventArgs e )
         {
-            NavigationService.Navigate( new Uri( "/CurrentTimePage.xaml", UriKind.Relative ) );
+            NavigationService.Navigate( new Uri( "/Gardiner.Oclock.UI;component/CurrentTimePage.xaml", UriKind.Relative ) );
         }
 
         private void GotoSayTime( object sender, RoutedEventArgs e )
         {
-            NavigationService.Navigate( new Uri( "/SayTheTimePage.xaml", UriKind.Relative ) );
+            NavigationService.Navigate( new Uri( "/Gardiner.Oclock.UI;component/SayTheTimePage.xaml", UriKind.Relative ) );
         }
 
         private void GotoAbout( object sender, EventArgs e )

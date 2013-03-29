@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Windows;
 using System.Windows.Input;
 
-namespace Gardiner.Oclock.Wp7
+namespace Gardiner.Oclock.UI
 {
     public partial class SayTheTimePage
     {

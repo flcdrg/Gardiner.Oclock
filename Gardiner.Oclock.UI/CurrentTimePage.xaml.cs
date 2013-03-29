@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Windows;
 
-namespace Gardiner.Oclock.Wp7
+namespace Gardiner.Oclock.UI
 {
     public partial class CurrentTimePage
     {
