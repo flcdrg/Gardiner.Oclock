@@ -76,9 +76,6 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutPage.xaml.cs">
-      <DependentUpon>AboutPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="AnalogClock.xaml.cs">
       <DependentUpon>AnalogClock.xaml</DependentUpon>
     </Compile>
@@ -101,10 +98,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="AboutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="AnalogClock.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

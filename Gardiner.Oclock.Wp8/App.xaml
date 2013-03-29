@@ -8,6 +8,50 @@
     <!--Application Resources-->
     <Application.Resources>
         <local:LocalizedStrings xmlns:local="clr-namespace:Gardiner.Oclock.Wp8" x:Key="LocalizedStrings"/>
+
+        <Style x:Key="ClockFace" TargetType="Ellipse">
+            <Setter Property="StrokeThickness" Value="6"/>
+
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <GradientStop Offset="0.0" Color="Black"/>
+                        <GradientStop Offset="1.0" Color="White"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Stroke">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0.0" Color="White" />
+                            <GradientStop Offset="1.0" Color="Black" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MarkersBig" TargetType="Rectangle">
+            <Setter Property="Width" Value="3"/>
+            <Setter Property="Height" Value="8"/>
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <SolidColorBrush Color="White"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MarkersSmall" TargetType="Rectangle">
+            <Setter Property="Width" Value="1"/>
+            <Setter Property="Height" Value="4"/>
+            <Setter Property="Fill">
+                <Setter.Value>
+                    <SolidColorBrush Color="White"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>
