@@ -5,24 +5,17 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{61B68141-BF17-41FE-8DDF-D75075D92871}</ProjectGuid>
+    <ProjectGuid>{F0D5B07E-7ACD-4D56-B2D1-374F18A134F0}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Gardiner.Oclock.Wp7</RootNamespace>
-    <AssemblyName>Gardiner.Oclock.Wp7</AssemblyName>
+    <RootNamespace>Gardiner.Oclock.UI</RootNamespace>
+    <AssemblyName>Gardiner.Oclock.UI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
     <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
-    <SilverlightApplication>true</SilverlightApplication>
-    <SupportedCultures>
-    </SupportedCultures>
-    <XapOutputs>true</XapOutputs>
-    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
-    <XapFilename>Gardiner.Oclock.Wp7.xap</XapFilename>
-    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
-    <SilverlightAppEntry>Gardiner.Oclock.Wp7.App</SilverlightAppEntry>
+    <SilverlightApplication>false</SilverlightApplication>
     <ValidateXaml>true</ValidateXaml>
     <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
   </PropertyGroup>
@@ -49,9 +42,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Phone" />
-    <Reference Include="Microsoft.Phone.Interop" />
-    <Reference Include="Microsoft.Xna.Framework" />
-    <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
     <Reference Include="System.Observable" />
     <Reference Include="System.Reactive.Core">
       <HintPath>..\packages\Rx-Core.2.1.30214.0\lib\SL4-WindowsPhone71\System.Reactive.Core.dll</HintPath>
@@ -71,74 +61,19 @@
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutPage.xaml.cs">
-      <DependentUpon>AboutPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AnalogClock.xaml.cs">
-      <DependentUpon>AnalogClock.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CurrentTimePage.xaml.cs">
-      <DependentUpon>CurrentTimePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SayTheTimePage.xaml.cs">
-      <DependentUpon>SayTheTimePage.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </ApplicationDefinition>
-    <Page Include="AboutPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AnalogClock.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CurrentTimePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="SayTheTimePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\AppManifest.xml" />
-    <None Include="Properties\WMAppManifest.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="noun_project_1164-173x173 - White.png" />
-    <Content Include="noun_project_1164-62x62 - White.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Gardiner.Oclock.UI\Gardiner.Oclock.UI.csproj">
-      <Project>{F0D5B07E-7ACD-4D56-B2D1-374F18A134F0}</Project>
-      <Name>Gardiner.Oclock.UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -146,5 +81,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ProjectExtensions />
 </Project>
