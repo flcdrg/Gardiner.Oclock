@@ -115,12 +115,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\Gardiner.Oclock.Wp7\noun_project_1164-173x173 - White.png">
-      <Link>noun_project_1164-173x173 - White.png</Link>
-    </Content>
-    <Content Include="..\Gardiner.Oclock.Wp7\noun_project_1164-62x62 - White.png">
-      <Link>noun_project_1164-62x62 - White.png</Link>
-    </Content>
+    <Content Include="ApplicationIcon.png" />
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -140,6 +135,8 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="FlipCycleTileMedium.png" />
+    <Content Include="FlipCycleTileSmall.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">

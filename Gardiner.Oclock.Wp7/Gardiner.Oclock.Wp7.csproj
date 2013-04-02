@@ -92,14 +92,14 @@
     <None Include="Properties\WMAppManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="noun_project_1164-173x173 - White.png" />
-    <Content Include="noun_project_1164-62x62 - White.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Gardiner.Oclock.UI\Gardiner.Oclock.UI.csproj">
       <Project>{F0D5B07E-7ACD-4D56-B2D1-374F18A134F0}</Project>
       <Name>Gardiner.Oclock.UI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png" />
+    <Content Include="Background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

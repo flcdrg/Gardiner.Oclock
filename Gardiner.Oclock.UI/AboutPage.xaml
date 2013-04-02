@@ -31,7 +31,7 @@
             <StackPanel>
                 <RichTextBox>
                     <Paragraph>
-                        Version 1.1
+                        Version 1.2
                         <LineBreak />
                         <LineBreak />
                         © David Gardiner 2013

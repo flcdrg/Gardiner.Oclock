@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{9e70a517-c568-4f8f-9d8e-a0d883904b9c}" Title="O'clock" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="David Gardiner" Description="Sample description" Publisher="David Gardiner" PublisherID="{c4b60352-784d-45d2-a79e-b814ac5cf819}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+  <App xmlns="" ProductID="{9e70a517-c568-4f8f-9d8e-a0d883904b9c}" Title="O'Clock" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="David Gardiner" Description="Learn to tell the time" Publisher="David Gardiner" PublisherID="{c4b60352-784d-45d2-a79e-b814ac5cf819}">
+    <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_IDENTITY_USER" />
       <Capability Name="ID_CAP_NETWORKING" />
@@ -19,20 +19,19 @@
     <Tokens>
       <PrimaryToken TokenID="Gardiner.Oclock.Wp8Token" TaskName="_default">
         <TemplateFlip>
-          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
+          <SmallImageURI IsRelative="true" IsResource="false">FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>O'clock</Title>
+          <BackgroundImageURI IsRelative="true" IsResource="false">FlipCycleTileMedium.png</BackgroundImageURI>
+          <Title>O'Clock</Title>
           <BackContent>
           </BackContent>
-          <BackBackgroundImageURI>
+          <BackBackgroundImageURI IsRelative="true" IsResource="false">
           </BackBackgroundImageURI>
           <BackTitle>
           </BackTitle>
-          <DeviceLockImageURI>
+          <DeviceLockImageURI IsRelative="true" IsResource="false">
           </DeviceLockImageURI>
-          <HasLarge>
-          </HasLarge>
+          <HasLarge>false</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>
