@@ -1,0 +1,64 @@
+<phone:PhoneApplicationPage
+    x:Class="Gardiner.Oclock.UI.SayTheTimePage2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Wp7="clr-namespace:Gardiner.Oclock.UI" xmlns:Ui="clr-namespace:Gardiner.Oclock.UI"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" 
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="O'CLOCK" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="say the hours" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" MinHeight="90" />
+                <RowDefinition Height="Auto" MinHeight="90" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            
+            <Wp7:AnalogClock x:Name="Clock"/>
+            <TextBlock Grid.Row="1" x:Name="Instructions" TextWrapping="Wrap">
+                Say out loud what time is displayed on the clock. The 
+                correct answer will be displayed after a short delay, or tap the screen
+                to find out sooner.
+                <LineBreak />
+                
+            </TextBlock>
+            <TextBlock x:Name="Answer" Grid.Row="2" Visibility="Collapsed"
+                       FontSize="70" HorizontalAlignment="Center" Margin="145,0" Width="166"
+                       
+                       >12:15</TextBlock>
+            
+            <TextBlock x:Name="AnswerSentence" 
+                       Visibility="Collapsed"
+                       Grid.Row="3" TextWrapping="Wrap" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Quarter past 12
+            </TextBlock>
+            <TextBlock x:Name="CountDown" Visibility="Collapsed" Grid.Row="4" Text="4" HorizontalAlignment="Right"/>
+            <Button x:Name="Go" Grid.Row="4" HorizontalAlignment="Center" Width="200" Click="Go_OnClick" Margin="128,0">Go</Button>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -24,11 +24,15 @@ namespace Gardiner.Oclock.UI
 
         public void Update( TimeSpan timeOfDay )
         {
-            MinutesHandStoryboard.Begin();
             HoursHandStoryboard.Begin();
 
             HoursHandStoryboard.Seek( timeOfDay );
-            MinutesHandStoryboard.Seek( timeOfDay );
+
+            if (MinutesHandCanvas.Visibility == Visibility.Visible)
+            {
+                MinutesHandStoryboard.Begin();
+                MinutesHandStoryboard.Seek( timeOfDay );
+            }
 
             if ( SecondsHandCanvas.Visibility == Visibility.Visible )
             {

@@ -1,5 +1,7 @@
 using System;
+using System.Diagnostics;
 using System.Windows;
+using Microsoft.Advertising;
 
 namespace Gardiner.Oclock.UI
 {
@@ -24,6 +26,16 @@ namespace Gardiner.Oclock.UI
         private void GotoAbout( object sender, EventArgs e )
         {
             NavigationService.Navigate( new Uri( "/Gardiner.Oclock.UI;component/AboutPage.xaml", UriKind.Relative ) );
+        }
+
+        private void AdControl_OnErrorOccurred( object sender, AdErrorEventArgs e )
+        {
+            Debug.WriteLine( e.Error );
+        }
+
+        private void GotoSayHours( object sender, RoutedEventArgs e )
+        {
+            NavigationService.Navigate( new Uri( "/Gardiner.Oclock.UI;component/SayTheTimePage2.xaml", UriKind.Relative ) );            
         }
     }
 }

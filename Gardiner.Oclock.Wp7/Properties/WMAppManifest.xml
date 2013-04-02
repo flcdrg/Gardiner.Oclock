@@ -3,6 +3,11 @@
   <App xmlns="" ProductID="{61b68141-bf17-41fe-8ddf-d75075d92871}" Title="O'Clock" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="David Gardiner" Description="Learn to tell the time" Publisher="David Gardiner">
     <IconPath IsRelative="true" IsResource="false">noun_project_1164-62x62 - White.png</IconPath>
     <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_PHONEDIALER" />
+      <Capability Name="ID_CAP_IDENTITY_USER" />
+      <Capability Name="ID_CAP_MEDIALIB" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="Gardiner.Oclock.UI;component/MainPage.xaml" />

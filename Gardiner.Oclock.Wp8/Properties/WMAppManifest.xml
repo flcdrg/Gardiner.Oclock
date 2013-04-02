@@ -4,6 +4,14 @@
   <App xmlns="" ProductID="{9e70a517-c568-4f8f-9d8e-a0d883904b9c}" Title="O'clock" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="David Gardiner" Description="Sample description" Publisher="David Gardiner" PublisherID="{c4b60352-784d-45d2-a79e-b814ac5cf819}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
+      <Capability Name="ID_CAP_IDENTITY_USER" />
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_PHONEDIALER" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
+      <Capability Name="ID_CAP_SENSORS" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="Gardiner.Oclock.UI;component/MainPage.xaml" />
