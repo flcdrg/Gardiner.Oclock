@@ -14,6 +14,7 @@ namespace Gardiner.Oclock.UI
             _rnd = new Random();
             InitializeComponent();
             Answer.Visibility = Visibility.Collapsed;
+            Go.Visibility = Visibility.Visible;
         }
 
         readonly Random _rnd;
